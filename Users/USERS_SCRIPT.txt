@@ -1,0 +1,16 @@
+CREATE (Siva:Users {title:'SIVAKMAR', Dob:1985})
+CREATE (Siri:Users {title:'SIRISH', Dob:1991})
+CREATE (Basavaraj:Users {title:'BASAVARAJH', Dob:1983})
+CREATE (Basic:BasicInfo {Gender:'Mae', born:1985})
+CREATE (Schooling: BasicInfo {School:'ZPHS'})
+CREATE (Contacts: BasicInfo {Mob:99999})
+CREATE  (Basic)-[:GeneralInfo {Lanuage:['Telugu']}]->(Siva),
+(Schooling)-[:Education {Location:['PGDL']}]->(Siva),
+(Contacts)-[:ContactInfo {Address:['Kurnool']}]->(Siva),
+(Basic)-[:GeneralInfo {Lanuage:['English']}]->(Siri),
+(Schooling)-[:Education {Location:['VIJAYA']}]->(Siri),
+(Contacts)-[:ContactInfo {Address:['KKD']}]->(Siri),
+(Basic)-[:GeneralInfo {Lanuage:['Kannada']}]->(Basavaraj),
+(Schooling)-[:Education {Location:['BANG']}]->(Basavaraj),
+(Contacts)-[:ContactInfo {Address:['KOLAR']}]->(Basavaraj)
+RETURN Siva ;
